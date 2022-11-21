@@ -78,8 +78,11 @@ li {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 
 }
+
+
 .link-nav-site:hover,
 .link-nav-site:focus {
     color: var(--accent-color);
@@ -157,14 +160,12 @@ a {
 }
 .hero {
     max-width: 1600px;
-    min-height: 600px;
     margin-left: auto;
     margin-right: auto;
     padding: 200px 0;
     background: var(--background-color);
-    background-image: linear-gradient( var(--rgba-hero),
-        var(--rgba-hero)),
-    url(../img/team.jpg);
+    background-image:
+    url(../goit-markup-hw-01/img/team.jpg);
     
     
 }
@@ -192,6 +193,7 @@ a {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
 
 }
 .hero-button:hover, 
@@ -262,9 +264,7 @@ background-color: rgba(0, 0, 0, 0.2);
     }
 
 
-.social-icon-about {
-    
-}
+
 .advances-icons {
     display: flex;
     align-items: center;
@@ -334,6 +334,26 @@ background-color: rgba(0, 0, 0, 0.2);
 .conteiner-work .i-tem:nth-child(3n) {
     margin-right: 0;
 }
+.work-jpg {
+    position: relative;
+    
+
+}
+
+.dodatok {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-background-color);
+    top: 0%;
+    transform: translateY(322%);
+    min-height: 70px;
+    min-width: 370px;
+    background-color: rgba(47, 48, 58, 0.8);;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+}
 
 .title-work  {
     margin-bottom: 0;
@@ -356,7 +376,7 @@ background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     
 
 }
@@ -465,7 +485,7 @@ fill: var(--second-background-color);
 .clients-baza {
     display: flex;
     justify-content: space-between;
-
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
    
 }
 .client-baza {
@@ -566,6 +586,8 @@ fill: var(--second-background-color);
     background-color: var(--rgba-tean-color);
     border-radius: 4px;
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    
 
 }
 
@@ -690,6 +712,7 @@ img {
     background-color: var(--rgba-two-color);
     border-radius: 50%;
     margin-right: 10px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .welcome-social-icons .welcome-social-item:last-child  {
@@ -710,6 +733,9 @@ margin-right: 0;
 .welcome-social-icons .welcome-social-item:focus {
     fill: var(--second-background-color);
     background-color: var(--accent-color);
+}
+.social-item {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .welcome-social-link .link {
     width: 100%;
