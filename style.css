@@ -12,6 +12,9 @@
     --rgba-hero: rgba(47, 48, 58, 0.4);
      --icons-color: #AFB1B8;
      --wrapper-color: rgba(33, 150, 243, 0.9);
+     --inline-color: #ececec;
+     
+
 
 
 }
@@ -79,7 +82,10 @@ li {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 
 }
-
+.header-auto-nav{
+    padding-top: 32px ;
+    padding-bottom: 32px;
+}
 
 .link-nav-site:hover,
 .link-nav-site:focus {
@@ -89,24 +95,24 @@ li {
 
 
 .link-nav-site {
+    position: relative;
     padding-top: 32px ;
     padding-bottom: 32px;
-display: inline-block;
+    display: inline-block;
     color: var(--primary-text-color);
 
 }
-.header-site-nav {
-    position: relative;
-}
+
 .link-nav-site::after{
     content:"";
     position: absolute;
-    width: 100%;
+    width: 0%;
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-color);
     left: 0;
-    bottom:-1;
+    bottom: -1px;
+    background-size: contain;
 
 }
 .link-nav-site.current::after {
@@ -175,6 +181,22 @@ a {
     display: flex;
     text-align: center;
 }
+.header {
+    position: relative;
+    
+}
+
+.conteiner-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--inline-color);
+    bottom:-1px;
+    left: 0;
+
+
+}
 .conteiner-hero {
     text-align: center;
     max-width: 1600px;
@@ -182,8 +204,9 @@ a {
     margin-right: auto;
     padding: 200px 0;
     background: var(--background-color);
-    background-image:
-    url(../goit-markup-hw-01/img/team.jpg);
+    background-image: linear-gradient(var(--rgba-hero),
+    var(--rgba-hero)),
+    url(./img/team.jpg);
 }
 
 
@@ -697,6 +720,7 @@ img {
 .card:hover .text-card {
     transform: translateY(0);
     outline: none;
+   
 }
 .section {
     padding: 94px 0;
@@ -704,7 +728,11 @@ img {
 .work {
     padding-top: 0;
 }
-
+.portfolio:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .footer-web {
     padding-top: 60px;
