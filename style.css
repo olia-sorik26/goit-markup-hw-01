@@ -79,7 +79,7 @@ li {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    
 
 }
 .header-auto-nav{
@@ -100,6 +100,8 @@ li {
     padding-bottom: 32px;
     display: inline-block;
     color: var(--primary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+ 
 
 }
 
@@ -117,8 +119,11 @@ li {
 }
 .link-nav-site.current::after {
     width: 100%;
+    
 
-
+}
+.current {
+    color: var(--accent-color);
 }
 
 .site-nav .header-site-nav+.header-site-nav {
@@ -132,11 +137,13 @@ margin-left: 50px;
   
     color: var(--second-text-color);
     margin-right: auto;
-        
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+    display: flex;  
    
 }
 .mail-tel-icons {
     margin-right: 10px;
+    fill: currentColor;
 }
 
 .link-nav-auto:hover,
@@ -144,10 +151,6 @@ margin-left: 50px;
     color: var(--accent-color)
     
 
-}
-.link-nav-auto:hover,
-.link-nav-auto:focus {
-    fill: var(--accent-color);
 }
 
 
@@ -163,10 +166,6 @@ margin-left: 50px;
 }
 
 
-.auto-nav .header-auto-nav:not(:last-child) {
-    margin-right: 30px;
-
-}
 a {
     text-decoration: none;
 
@@ -200,10 +199,11 @@ a {
 .conteiner-hero {
     text-align: center;
     max-width: 1600px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
     padding: 200px 0;
-    background: var(--background-color);
+    background-color: var(--background-color);
     background-image: linear-gradient(var(--rgba-hero),
     var(--rgba-hero)),
     url(./img/team.jpg);
@@ -386,8 +386,7 @@ background-color: rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
     color: var(--second-background-color);
-    top: 0%;
-    transform: translateY(322%);
+    bottom: 0;
     min-height: 70px;
     min-width: 370px;
     background-color: rgba(47, 48, 58, 0.8);;
@@ -416,7 +415,7 @@ background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+   
     
 
 }
@@ -436,6 +435,9 @@ fill: var(--second-background-color);
     justify-content: center;
    
 
+}
+.social-link .link{
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .title-list-team .social-item {
     width: 44px;
@@ -525,7 +527,7 @@ fill: var(--second-background-color);
 .clients-baza {
     display: flex;
     justify-content: space-between;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    
    
 }
 .client-baza {
@@ -533,6 +535,9 @@ fill: var(--second-background-color);
     padding: 16px 32px;
     border: 1px solid var(--icons-color);
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    cursor: pointer;
+
 }
 .client-baza:last-child {
     margin-right: 0;
@@ -541,7 +546,9 @@ fill: var(--second-background-color);
 
     
 .client-baza-icon {
-    fill: var(--icons-color);}
+    fill: var(--icons-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
 
 .client-baza:hover   {
         fill: var(--accent-color);
@@ -654,7 +661,7 @@ img {
 
 .portfolio {
     align-items:stretch;
-
+   
    
 }
 .portfolio:nth-child(3n) {
@@ -683,6 +690,7 @@ img {
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-content {
     padding: 20px 24px;
@@ -691,9 +699,10 @@ img {
 .img-wrapper {
     position: relative;
     overflow: hidden;
-    
+    background-size: contain;
     
 }
+
 
 .text-card  {
     position: absolute;
@@ -701,6 +710,7 @@ img {
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    
     top: 0;
     left: 0;
     right: 0;
