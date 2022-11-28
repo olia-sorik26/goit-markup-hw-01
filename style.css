@@ -310,8 +310,13 @@ a {
     border: 1px solid var(--form-modal-color);
     
     margin-bottom: 28px;
+   
 }
-.form-input:hover ,
+.textarea {
+    resize: none;
+    height: 120px;
+}
+
 .form-input:focus{
     border-color: #2196f2;
 
