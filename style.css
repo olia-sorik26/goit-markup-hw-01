@@ -15,6 +15,7 @@
      --wrapper-color: rgba(33, 150, 243, 0.9);
      --inline-color: #ececec;
      --form-modal-color: rgba(33, 33, 33, 0.2);
+     --texterea-color: rgba(117, 117, 117, 0.5);
      
 
 
@@ -267,7 +268,7 @@ a {
     background-color: var(--second-background-color);
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px;
-   padding: 40px;
+    padding: 40px;
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 
 
@@ -287,6 +288,7 @@ a {
     margin-bottom: 20px;
     display: block;
     margin: 0;
+    
 }
 .form-label{
     display: flex;
@@ -304,26 +306,38 @@ a {
     
     width: 100%;
     margin: 0;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 35px;
     font: inherit;
     border-radius: 4px;
     border: 1px solid var(--form-modal-color);
     
+
     margin-bottom: 28px;
-   
+    cursor: pointer;
 }
+
+
 .textarea {
     resize: none;
     height: 120px;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    margin-bottom: 20px;
+    padding-left: 16px;
+   
 }
 
-.form-input:focus{
-    border-color: #2196f2;
+.form-input::placeholder{
+    color: var(--texterea-color);
+   
 
 }
 .form-svg {
     position: relative;
-    margin-bottom: 10px;
+    
 }
 .svg-modal-form {
     display: flex;
@@ -334,9 +348,61 @@ a {
     fill: var(--primary-text-color);
     
 }
-.svg-modal-form:focus{
-    fill: #2196f2;
+
+.check-mark-label {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+.check-mark-icon {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    margin-right: 8px;
+  
+    }
+
+
+.check-mark-label .check-mark {
+    fill: transparent;
+}
+.check-mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: var(--primary-text-color);
+    margin-bottom: 30px;
+ 
+}
+
+
+
+.check-mark-label {
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: calc (24 / 14);
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+
+}
+.check-mark input:checked + .check-mark-label .check-mark-span{
+    fill: var(--second-background-color);
+}
+.check-mark input:checked + .check-mark-label .check-mark-icon{
+    
+    background-color: var(--accent-color);
+    border: none;
+}
+.contract {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    letter-spacing: 0.03em;
+    margin-left: 8px;
+}
+ 
 
 .close-sing {
     position: absolute;
@@ -869,7 +935,7 @@ img {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
-.welcome-social-icons.link:last-child {
+.welcome-social-item:last-child .welcome-social-link{
      margin-right: 0;
 }
 
@@ -877,6 +943,7 @@ img {
 
 .welcome-social-icon {
     fill: var(--primary-wtite-color);
+    gap: 10px;
     
 }
 .welcome-social-link.link:hover, 

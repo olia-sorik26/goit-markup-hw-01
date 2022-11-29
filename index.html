@@ -108,7 +108,24 @@
                 id="text"
                 placeholder="Введіть текст"></textarea>
             </div class="form-modal">
-            <button type="chected">Погоджуюся з розсилкою та приймаю Умови договору</button>
+            <div class="check-mark">
+                <input
+                type="checkbox" hidden
+                name="check-mark-label" 
+                id="check-mark-label"
+                value="check"
+                class="check-mark-id"
+                />
+            <label for="check-mark-label" class="check-mark-label">
+                <span class="check-mark-span">
+                    <svg class="check-mark-icon" width="11" height="8">
+                        <use href="./img/icons.svg#icon-check-mark"></use>
+                    </svg>
+                </span>
+                Погоджуюся з розсилкою та приймаю  
+                <a class="contract" href=" ">Умови договору</a>
+            </label>
+            </div>
             <button type="button" class="button-modal">Відправити</button>
             </form>
             
