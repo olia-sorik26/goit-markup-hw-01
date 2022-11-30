@@ -383,7 +383,7 @@ a {
 .check-mark-label {
     font-weight: 400px;
     font-size: 14px;
-    line-height: calc (24 / 14);
+    line-height: calc (24 / 14);        ` 
     letter-spacing: 0.03em;
     color: var(--second-text-color);
 
@@ -402,7 +402,9 @@ a {
     letter-spacing: 0.03em;
     margin-left: 8px;
 }
- 
+
+input .check-mark-icon {
+   fill: #2196f2;}
 
 .close-sing {
     position: absolute;
