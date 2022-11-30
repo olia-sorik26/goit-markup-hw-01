@@ -383,7 +383,7 @@ a {
 .check-mark-label {
     font-weight: 400px;
     font-size: 14px;
-    line-height: calc (24 / 14);        ` 
+    line-height: calc (24 / 14);       
     letter-spacing: 0.03em;
     color: var(--second-text-color);
 
@@ -402,9 +402,31 @@ a {
     letter-spacing: 0.03em;
     margin-left: 8px;
 }
+input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none ;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+.form-input:valid + .svg-modal-form,
+.form-input:focus {
+    outline: var(--accent-color);
+    border-color: var(--accent-color);
 
-input .check-mark-icon {
-   fill: #2196f2;}
+     }
+   
+.form-input:valid,
+.form-input:focus + .svg-modal-form{
+        fill: var(--accent-color);
+    }
+
+textarea:valid + .check-mark-span,
+textarea:focus {
+    outline: var(--accent-color);
+    border-color: #2196f2;
+     }
 
 .close-sing {
     position: absolute;
