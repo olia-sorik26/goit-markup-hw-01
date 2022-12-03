@@ -311,7 +311,7 @@ a {
     color: var(--second-text-color);
 
 }
-.form-input{
+.form-modal-line{
     display: flex;
     width: 100%;
     margin: 0;
@@ -330,7 +330,7 @@ position: relative;
 }
 
 
-.textarea {
+.comment {
     resize: none;
     height: 120px;
     font-size: 12px;
@@ -341,7 +341,7 @@ position: relative;
    
 }
 
-.form-input::placeholder{
+.form-modal-line::placeholder{
     color: var(--texterea-color);
    
 
@@ -425,20 +425,20 @@ input {
     appearance: none;
     outline: none;
 }
-.form-input:valid + .svg-modal-form,
-.form-input:focus {
+.form-modal-line:valid + .svg-modal-form,
+.form-modal-line:focus {
     outline: var(--accent-color);
     border-color: var(--accent-color);
 
      }
    
-.form-input:valid,
-.form-input:focus + .svg-modal-form{
+.form-modal-line:valid,
+.form-modal-line:focus + .svg-modal-form{
         fill: var(--accent-color);
     }
 
-textarea:valid + .check-mark-span,
-textarea:focus {
+.comment:valid + .check-mark-span,
+.comment:focus {
     outline: var(--accent-color);
     border-color: #2196f2;
      }
@@ -1050,7 +1050,7 @@ img {
     margin-left: 10px;
 }
 
-.input-button {
+.button-comment {
     width: 357px;
     display: flex;
     flex-grow: 1;
@@ -1060,11 +1060,13 @@ img {
     border-radius: 4px;
     border: 1px solid var(--rgba-four-color);
     background-color: var(--background-color);
+    color: var(--second-background-color);
+    padding: 15px;
+    
 
 }
-.input-button::placeholder {
+.button-comment::placeholder {
     font-size: 16px;
-    padding: 15px;
     font-weight: normal;
     color: var(--rgba-color);
 }
