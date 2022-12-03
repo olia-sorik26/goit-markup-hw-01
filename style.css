@@ -312,7 +312,7 @@ a {
 
 }
 .form-input{
-    
+    display: flex;
     width: 100%;
     margin: 0;
     padding-top: 10px;
@@ -325,6 +325,8 @@ a {
 
     margin-bottom: 28px;
     cursor: pointer;
+position: relative;
+   
 }
 
 
@@ -347,13 +349,16 @@ a {
 .form-svg {
     position: relative;
     
+    
 }
 .svg-modal-form {
     display: flex;
     position: absolute;
-    top: 50px;
+      justify-content: center;
+    align-items: center;
+    top: 0px;
     left: 12px;
-    transform: translateY(-200%);
+    transform: translateY(60%);
     fill: var(--primary-text-color);
     
 }
@@ -363,6 +368,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
 }
 .check-mark-icon {
@@ -462,6 +468,7 @@ textarea:focus {
     font-size: 16px;
     line-height: calc(30 /16);
     letter-spacing: 0.06em;
+    cursor: pointer;
 }
 
 .about-advances {
